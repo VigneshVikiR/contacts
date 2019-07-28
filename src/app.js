@@ -1,21 +1,19 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const path = require('path');
+const schemas = require('../src/schemas');
 
 const config = require('../config');
 const routes = require('../src/routes');
 const { connect } = require('../src/database');
+const { addSchema } = require('./utils');
+const logger = require('./utils/logger');
 
+global.logger = logger;
+
+const router = express.Router();
 const app = express();
 const { server } = config;
-
-const methodMapping = {
-  DELETE: 'del',
-  POST: 'post',
-  PUT: 'put',
-  GET: 'get',
-};
 
 const corsOptions = {
   credentials: true,
@@ -29,45 +27,42 @@ const corsOptions = {
   origin: true,
 };
 
-module.exports = () => {
-  console.log('candhucuua', routes())
-  app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({ extended: true }));
+module.exports = async () => {
+  try {
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: true }));
 
-  app.options('*', cors(corsOptions));
+    app.options('*', cors(corsOptions));
 
-  //assigning routes
-  for (let route of routes()) {
-    for (let method of route.methods) {
-      const handlers = [];
-      if (method.validate) {
-        const validateKeys = Object.keys(method.validate);
-        validateKeys.forEach(validateKey => {
-          handlers.push((request, response, next) => {
-            if (
-              request[validateKey].order_direction &&
-              typeof request[validateKey].order_direction === 'string'
-            ) {
-              request[validateKey].order_direction = request[validateKey].order_direction.split(
-                ',',
-              );
-            }
-            return utils
-              .validateParams(request[validateKey], method.validate[validateKey])
-              .then(() => next())
-              .catch(error => next(error));
-          });
-        });
-      }
-      app[methodMapping[method.methodName]](path.join(config.apiBasePath, route.path), [...handlers])
+    //creating schemas
+    for (let schema in schemas) {
+      addSchema(schema, schemas[schema])
     }
+
+    //assigning routes
+    app.use(routes(router));
+    app.use((error, req, res, next) => {
+      if (error.isBoom) {
+        res.status(error.output.statusCode).json({ error: error.output.payload.message });
+      } else {
+        next(error);
+      }
+      if (res) {
+        next(res);
+      }
+    });
+    // db connect
+    await connect();
+
+    //Initialising server
+    app.listen(server.port, () => {
+      logger.log({
+        level: 'info',
+        message: `server connected with the specified port, ${server.port}`
+      })
+    })
+  } catch (e) {
+    return e;
   }
 
-  // db connect
-  connect();
-
-  //Initialising server
-  app.listen(server.port, () => {
-    console.log('server connected with the specified port', server.port);
-  })
 };

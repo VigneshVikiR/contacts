@@ -1,0 +1,78 @@
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"error","message":"viewContact-Performing an update on the path '_id' would modify the immutable field '_id'","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-Performing an update on the path '_id' would modify the immutable field '_id'","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"error","message":"viewContact-Performing an update on the path '_id' would modify the immutable field '_id'","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-Performing an update on the path '_id' would modify the immutable field '_id'","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"error","message":"viewContact-Performing an update on the path '_id' would modify the immutable field '_id'","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-Performing an update on the path '_id' would modify the immutable field '_id'","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"error","message":"viewContact-Performing an update on the path '_id' would modify the immutable field '_id'","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-Performing an update on the path '_id' would modify the immutable field '_id'","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"error","message":"viewContact-Performing an update on the path '_id' would modify the immutable field '_id'","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-Performing an update on the path '_id' would modify the immutable field '_id'","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"error","message":"viewContact-Performing an update on the path '_id' would modify the immutable field '_id'","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-Performing an update on the path '_id' would modify the immutable field '_id'","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"error","message":"viewContact-Performing an update on the path '_id' would modify the immutable field '_id'","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-Performing an update on the path '_id' would modify the immutable field '_id'","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"error","message":"viewContact-Performing an update on the path '_id' would modify the immutable field '_id'","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-Performing an update on the path '_id' would modify the immutable field '_id'","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"error","message":"viewContact-Performing an update on the path '_id' would modify the immutable field '_id'","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-Performing an update on the path '_id' would modify the immutable field '_id'","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"info","message":"deleteContact-Success","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-success","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-Cannot set headers after they are sent to the client","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-contact not found","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-contact not found","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-contact not found","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-contact not found","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-contact not found","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-contact not found","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-contact not found","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-contact not found","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-contact not found","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-contact not found","service":"contacts"}
+{"level":"info","message":"viewContact-Success","service":"contacts"}
+{"level":"info","message":"deleteContact-Success","service":"contacts"}
+{"level":"error","message":"contactHandler-deleteContact-success","service":"contacts"}

@@ -1,56 +1,45 @@
-const Ajv = require('ajv');
-const boom = require('boom');
-
-const ajv = new Ajv({
-  allErrors: true,
-  format: 'full',
-  useDefaults: true,
-  coerceTypes: 'array',
-  errorDataPath: 'property',
-  sourceCode: false,
-  jsonPointers: true,
-});
-
-// Prevent "meta schema not defined" debug output
+let Ajv = require('ajv');
+let ajv = Ajv({ allErrors: true, removeAdditional: true });
 ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-06.json'));
 
-require('ajv-keywords')(ajv, ['switch']);
-require('ajv-errors')(ajv);
-
-const deepTrim = object => {
-  if (object != null) {
-    if (typeof object === 'object' || object instanceof Object) {
-      for (const property in object) {
-        object[property] = deepTrim(JSON.parse(JSON.stringify(object[property])));
-      }
-    } else if (typeof object === 'string' || object instanceof String) {
-      const str = object.trim();
-      object = str === '' ? null : str;
-    }
-  }
-  return object;
+const addSchema = (prefix, schema) => {
+  ajv.addSchema(schema, prefix)
 };
 
-const validateParams = (params, schema) =>
-  new Promise((resolve, reject) => {
-    params = deepTrim(params);
-    const validate = ajv.compile(schema);
-    const isValidParams = validate(params);
-    if (!isValidParams) {
-      let validateErrors = [];
-      let errorMsg = 'Input validation failed';
-      validate.errors.forEach(error => {
-        if (error.keyword === 'errorMessage') {
-          validateErrors = validateErrors.concat(error.params.errors);
-          errorMsg = validate.errors.length === 1 ? error.message : errorMsg;
-        } else {
-          validateErrors.push(error);
-        }
-      });
-      const error = new boom.BadRequestError(errorMsg);
-      error.errors = validateErrors;
-      return reject(error);
+/**
+ * Format error responses
+ * @param  {Object} schemaErrors - array of json-schema errors, describing each validation failure
+ * @return {String} formatted api response
+ */
+function errorResponse(schemaErrors) {
+  let errors = schemaErrors.map((error) => {
+    return {
+      path: error.dataPath,
+      message: error.message
     }
-    return resolve();
   });
-module.exports.validateParams = validateParams;
+  return {
+    status: 'failed',
+    errors: errors
+  }
+}
+
+/**
+ * Validates incoming request bodies against the given schema,
+ * providing an error response when validation fails
+ * @param  {String} schemaName - name of the schema to validate
+ * @return {Object} response
+ */
+let validateSchema = (schema) => {
+  return (req, res, next) => {
+    let valid = ajv.validate(schema, req.body);
+    console.log(valid);
+    if (!valid) {
+      return res.send(errorResponse(ajv.errors))
+    }
+    next()
+  }
+};
+
+module.exports.validateParams = validateSchema;
+module.exports.addSchema = addSchema;

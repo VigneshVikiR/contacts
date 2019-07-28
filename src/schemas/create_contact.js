@@ -51,6 +51,6 @@ module.exports = {
         }
       },
     },
-    required: ['help_menu_id'],
+    required: ['email'],
   },
 };

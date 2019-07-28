@@ -1,14 +1,16 @@
+const { env } = process;
+
 const configDocuments = {
   development: {
     server: {
       host: 'localhost',
-      port: 3000,
+      port: 3001,
     },
     database: {
-      name: 'contactDemo',
-      user: 'user',
-      pass: '123456',
-      hosts: 'localhost:27017',
+      name: env.DB_NAME,
+      user: env.DB_USER,
+      pass: env.DB_PASS,
+      hosts: env.DB_HOST_URL,
       ssl: false,
     },
     apiBasePath: '/api',

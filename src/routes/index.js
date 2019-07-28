@@ -1,6 +1,14 @@
-const contacts = require('./contacts');
+const _ = require('lodash');
+const fs = require('fs');
+const path = require('path');
 
-module.exports = () =>
-  [].concat(
-    contacts(),
-  );
+const routes = (router) => {
+  _.each(fs.readdirSync(__dirname), (fileName) => {
+    if (fileName != 'index.js') {
+      router = require(path.join(__dirname, fileName))();
+    }
+  });
+  return router;
+};
+
+module.exports = routes;

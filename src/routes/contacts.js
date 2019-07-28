@@ -1,23 +1,34 @@
 const {
-  addContact,
+  contactHandler,
 } = require('../handler/contacts');
 
-const {
-  create, update, remove, list
-} = require('../schemas/contacts');
+const { create_contact } = require('../schemas');
+const { validateParams } = require('../utils');
+const router = require('express').Router();
 
-const routes = [
-  {
-    path: '/contacts',
-    methods: [
-      {
-        name: 'ADD_CONTACT',
-        methodName: 'POST',
-        validate: create,
-        handler: addContact,
-      },
-    ],
-  },
-];
+const routes = () => {
+  router.post('/contacts',
+    validateParams(create_contact),
+    contactHandler.createContact,
+  );
+  router.get('/contacts',
+    validateParams(create_contact),
+    contactHandler.listContact,
+  );
+  router.put('/contacts/:id',
+    validateParams(create_contact),
+    contactHandler.editContact,
+  );
+  router.get('/contacts/:id',
+    validateParams(create_contact),
+    contactHandler.viewContact,
+  );
+  router.delete('/contacts/:id',
+    validateParams(create_contact),
+    contactHandler.deleteContact,
+  );
 
-module.exports = () => routes;
+  return router;
+};
+
+module.exports = routes;
