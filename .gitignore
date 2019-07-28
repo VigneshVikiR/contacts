@@ -5,3 +5,4 @@ site_modules/
 *.DS_Store
 coverage/
 .vscode
+
