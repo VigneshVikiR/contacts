@@ -32,10 +32,15 @@ function errorResponse(schemaErrors) {
  */
 let validateSchema = (schema) => {
   return (req, res, next) => {
-    let valid = ajv.validate(schema, req.body);
-    console.log(valid);
-    if (!valid) {
-      return res.send(errorResponse(ajv.errors))
+    // merging the query with body
+    if (req.query) {
+      req.body = Object.assign(req.body, req.query);
+    }
+    if (req.body) {
+      let valid = ajv.validate(schema, req.body);
+      if (!valid) {
+        return res.send(errorResponse(ajv.errors))
+      }
     }
     next()
   }

@@ -76,3 +76,104 @@
 {"level":"info","message":"viewContact-Success","service":"contacts"}
 {"level":"info","message":"deleteContact-Success","service":"contacts"}
 {"level":"error","message":"contactHandler-deleteContact-success","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"error","message":"listOrSearchGroup-Cannot read property 'length' of undefined-handler","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"error","message":"listOrSearchGroup-Cannot read property 'length' of undefined-handler","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"groupsAccessor-listOrSearchGroup-Success","service":"contacts"}
+{"level":"error","message":"listOrSearchGroup-success-handler","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"groupsAccessor-listOrSearchGroup-Success","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"groupsAccessor-listOrSearchGroup-Success","service":"contacts"}
+{"level":"error","message":"listOrSearchGroup-success-handler","service":"contacts"}
+{"level":"info","message":"groupsAccessor-listOrSearchGroup-Success","service":"contacts"}
+{"level":"error","message":"listOrSearchGroup-success-handler","service":"contacts"}
+{"level":"info","message":"groupsAccessor-listOrSearchGroup-Success","service":"contacts"}
+{"level":"error","message":"listOrSearchGroup-success-handler","service":"contacts"}
+{"level":"error","message":"createGroup-_ is not defined-handler","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"groupsAccessor-createGroup-Success","service":"contacts"}
+{"level":"error","message":"createGroup-success-handler","service":"contacts"}
+{"level":"info","message":"viewGroup-Success","service":"contacts"}
+{"level":"error","message":"editGroup-_id is not defined","service":"contacts"}
+{"level":"error","message":"editGroup-_id is not defined-handler","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"viewGroup-Success","service":"contacts"}
+{"level":"info","message":"editGroup-Success","service":"contacts"}
+{"level":"error","message":"editGroup-success-handler","service":"contacts"}
+{"level":"info","message":"groupsAccessor-listOrSearchGroup-Success","service":"contacts"}
+{"level":"error","message":"listOrSearchGroup-success-handler","service":"contacts"}
+{"level":"info","message":"groupsAccessor-listOrSearchGroup-Success","service":"contacts"}
+{"level":"error","message":"listOrSearchGroup-success-handler","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"groupsAccessor-listOrSearchGroup-Success","service":"contacts"}
+{"level":"error","message":"listOrSearchGroup-success-handler","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"groupsAccessor-listOrSearchGroup-Success","service":"contacts"}
+{"level":"error","message":"listOrSearchGroup-success-handler","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"groupsAccessor-listOrSearchGroup-Success","service":"contacts"}
+{"level":"error","message":"listOrSearchGroup-success-handler","service":"contacts"}
+{"level":"info","message":"groupsAccessor-listOrSearchGroup-Success","service":"contacts"}
+{"level":"error","message":"listOrSearchGroup-success-handler","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"groupsAccessor-listOrSearchGroup-Success","service":"contacts"}
+{"level":"error","message":"listOrSearchGroup-success-handler","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"groupsAccessor-listOrSearchGroup-Success","service":"contacts"}
+{"level":"error","message":"listOrSearchGroup-success-handler","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"error","message":"groupsAccessor-listOrSearchGroup-_ is not defined","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"error","message":"groupsAccessor-listOrSearchGroup-Failed to parse: { find: \"Groups\", filter: { $or: [ { [object Object]: /^.*friends.*/i } ] }, sort: { createdAt: 1 }, projection: {}, skip: \"10\", limit: \"10\", returnKey: false, showRecordId: false, $db: \"contactDemo\" }. 'skip' field must be numeric.","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"error","message":"groupsAccessor-listOrSearchGroup-Failed to parse: { find: \"Groups\", filter: { $or: [ { [object Object]: /^.*friends.*/i } ] }, sort: { createdAt: 1 }, projection: {}, skip: \"10\", limit: \"10\", returnKey: false, showRecordId: false, $db: \"contactDemo\" }. 'skip' field must be numeric.","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"error","message":"groupsAccessor-listOrSearchGroup-Failed to parse: { find: \"Groups\", filter: { $or: [ { [object Object]: /^.*friends.*/i } ] }, sort: { createdAt: 1 }, projection: {}, skip: \"10\", limit: \"10\", returnKey: false, showRecordId: false, $db: \"contactDemo\" }. 'skip' field must be numeric.","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"error","message":"groupsAccessor-listOrSearchGroup-Failed to parse: { find: \"Groups\", filter: { $or: [ { [object Object]: /^.*friends.*/i } ] }, sort: { createdAt: 1 }, projection: {}, skip: \"10\", limit: \"10\", returnKey: false, showRecordId: false, $db: \"contactDemo\" }. 'skip' field must be numeric.","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"error","message":"groupsAccessor-listOrSearchGroup-Failed to parse: { find: \"Groups\", filter: { $or: [ { [object Object]: /^.*friends.*/i } ] }, sort: { createdAt: 1 }, projection: {}, skip: \"10\", limit: \"10\", returnKey: false, showRecordId: false, $db: \"contactDemo\" }. 'skip' field must be numeric.","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"error","message":"groupsAccessor-listOrSearchGroup-Failed to parse: { find: \"Groups\", filter: { $or: [ { name: /^.*friends.*/i } ] }, sort: { createdAt: 1 }, projection: {}, skip: \"10\", limit: \"10\", returnKey: false, showRecordId: false, $db: \"contactDemo\" }. 'skip' field must be numeric.","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"error","message":"groupsAccessor-listOrSearchGroup-Failed to parse: { find: \"Groups\", filter: { $or: [ { name: /^.*friends.*/i } ] }, sort: { createdAt: 1 }, projection: {}, skip: \"10\", limit: \"10\", returnKey: false, showRecordId: false, $db: \"contactDemo\" }. 'skip' field must be numeric.","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"error","message":"groupsAccessor-listOrSearchGroup-Failed to parse: { find: \"Groups\", filter: { $or: [ { name: /^.*friends.*/i } ] }, sort: { createdAt: 1 }, projection: {}, skip: \"10\", limit: \"10\", returnKey: false, showRecordId: false, $db: \"contactDemo\" }. 'skip' field must be numeric.","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"error","message":"groupsAccessor-listOrSearchGroup-Failed to parse: { find: \"Groups\", filter: { $or: [ { name: /^.*friends.*/i } ], isActive: true }, sort: { createdAt: 1 }, projection: {}, skip: \"10\", limit: \"10\", returnKey: false, showRecordId: false, $db: \"contactDemo\" }. 'skip' field must be numeric.","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"error","message":"groupsAccessor-listOrSearchGroup-Failed to parse: { find: \"Groups\", filter: { $or: [ { name: /^.*friends.*/i } ], isActive: true }, sort: { createdAt: 1 }, projection: {}, skip: \"10\", limit: \"10\", returnKey: false, showRecordId: false, $db: \"contactDemo\" }. 'skip' field must be numeric.","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"error","message":"groupsAccessor-listOrSearchGroup-Failed to parse: { find: \"Groups\", filter: { $or: [ { name: /^.*friends.*/i } ], isActive: true }, projection: {}, skip: \"10\", limit: \"10\", returnKey: false, showRecordId: false, $db: \"contactDemo\" }. 'skip' field must be numeric.","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"error","message":"groupsAccessor-listOrSearchGroup-Failed to parse: { find: \"Groups\", filter: { $or: [ { name: /^.*friends.*/i } ], isActive: true }, sort: { createdAt: 1 }, projection: {}, skip: \"10\", limit: \"10\", returnKey: false, showRecordId: false, $db: \"contactDemo\" }. 'skip' field must be numeric.","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"error","message":"groupsAccessor-listOrSearchGroup-Failed to parse: { find: \"Groups\", filter: { $or: [ { name: /^.*friends.*/i } ], isActive: true }, sort: { createdAt: 1 }, projection: {}, skip: \"10\", limit: \"10\", returnKey: false, showRecordId: false, $db: \"contactDemo\" }. 'skip' field must be numeric.","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"error","message":"groupsAccessor-listOrSearchGroup-Failed to parse: { find: \"Groups\", filter: { $or: { name: /^.*friends.*/i }, isActive: true }, sort: { createdAt: 1 }, projection: {}, skip: \"10\", limit: \"10\", returnKey: false, showRecordId: false, $db: \"contactDemo\" }. 'skip' field must be numeric.","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"error","message":"groupsAccessor-listOrSearchGroup-Failed to parse: { find: \"Groups\", filter: { $or: [ { name: /^.*friends.*/i } ], isActive: true }, sort: { createdAt: 1 }, projection: {}, skip: \"10\", limit: \"10\", returnKey: false, showRecordId: false, $db: \"contactDemo\" }. 'skip' field must be numeric.","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"error","message":"groupsAccessor-listOrSearchGroup-Failed to parse: { find: \"Groups\", filter: { $or: [ { name: /^.*\"friends\".*/i } ], isActive: true }, sort: { createdAt: 1 }, projection: {}, skip: \"10\", limit: \"10\", returnKey: false, showRecordId: false, $db: \"contactDemo\" }. 'skip' field must be numeric.","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"groupsAccessor-listOrSearchGroup-Success","service":"contacts"}
+{"level":"error","message":"listOrSearchGroup-success-handler","service":"contacts"}
+{"level":"info","message":"groupsAccessor-listOrSearchGroup-Success","service":"contacts"}
+{"level":"error","message":"listOrSearchGroup-success-handler","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"groupsAccessor-listOrSearchGroup-Success","service":"contacts"}
+{"level":"error","message":"listOrSearchGroup-success-handler","service":"contacts"}
+{"level":"info","message":"server connected with the specified port, 3001","service":"contacts"}
+{"level":"info","message":"groupsAccessor-listOrSearchGroup-Success","service":"contacts"}
+{"level":"error","message":"listOrSearchGroup-success-handler","service":"contacts"}
+{"level":"info","message":"viewGroup-Success","service":"contacts"}
+{"level":"error","message":"viewGroup-success-handler","service":"contacts"}
+{"level":"info","message":"viewGroup-Success","service":"contacts"}
+{"level":"error","message":"viewGroup-group not fond-handler","service":"contacts"}

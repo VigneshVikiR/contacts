@@ -6,7 +6,7 @@ const GroupSchema = new Schema({
     type: Boolean,
     default: true
   },
-  contactsList: [{
+  contacts: [{
     type: Schema.Types.ObjectId,
     ref: 'Contacts'
   }]

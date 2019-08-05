@@ -7,23 +7,30 @@ const {
     createContact,
     listContact,
     getCount,
+    editContact,
   }
 } = require('../data-processor/contacts');
 
-const { validateObjectId } = require('../data-processor/utils');
-
+/**
+ * collection of the contact handlers
+ * createContact : used to create a new contact
+ * deleteContact : used to delete an existing contact
+ * editContact : used to update an existing contact
+ * listContact : get list of contacts
+ * viewContact : view contact
+ * @type {{createContact: createContact, deleteContact: deleteContact, editContact: editContact, listContact: listContact, viewContact: viewContact}}
+ */
 module.exports.contactHandler = {
   createContact: async (req, res, next) => {
     try {
       let { body } = req;
       let result = await createContact(body);
-      result = Object.assign({ data: { contactInfo: result } }, {});
       res.status(200).send({ contact: result });
       next();
     } catch (err) {
       logger.log({
         level: 'error',
-        message: `contactHandler-createContact-${err.message}`,
+        message: `createContact-${err.message}-handler`,
       });
       next(err)
     }
@@ -42,7 +49,7 @@ module.exports.contactHandler = {
       await deleteContact(id);
       logger.log({
         level: 'error',
-        message: `contactHandler-deleteContact-success`,
+        message: `deleteContact-success-handler`,
       });
 
       res.status(200).send({ message: 'contact deleted successfully' });
@@ -50,49 +57,42 @@ module.exports.contactHandler = {
     } catch (err) {
       logger.log({
         level: 'error',
-        message: `contactHandler-deleteContact-${err.message}`,
+        message: `deleteContact-${err.message}-handler`,
       });
       next(err);
     }
   },
   editContact: async (req, res, next) => {
-    let apiId = (req.method + req.route.path).toLowerCase();
     try {
       const { params: { id }, body } = req;
-      let isValidObejctId = validateObjectId(id);
-      if (!isValidObejctId) {
-        req.result = 'Invalid Object Id';
-        next();
-      }
-      let contactInfo = await contactsAccessor.getContact(id);
+      let contactInfo = await getContact(id);
       if (!contactInfo) {
         req.result = 'contact not found';
         next();
       }
-      const getUpdateData = await editContact(contactInfo, body);
-      let result = await contactsAccessor.editContact(id, body);
-      req.result = 'success';
+      await editContact(id, body);
+      res.status(200).send({ message: 'contact updated successfully' });
       logger.log({
         level: 'error',
-        message: `contactHandler-editContact-success`,
+        message: `editContact-success-handler`,
       });
       next();
     } catch (err) {
       logger.log({
         level: 'error',
-        message: `contactHandler-editContact-${err.message}`,
+        message: `editContact-${err.message}-handler`,
       });
       next(err);
     }
   },
   listContact: async (req, res, next) => {
     try {
-      let body = req.body;
-      let result = await listContact(body);
+      const { query } = req;
+      let result = await listContact(query);
       let total = await getCount();
       result = Object.assign({
         data: {
-          index: body.index,
+          index: query.index,
           limit: result.length,
           total,
           contactList: result
@@ -101,13 +101,13 @@ module.exports.contactHandler = {
       res.status(200).send({ contacts: result });
       logger.log({
         level: 'error',
-        message: `contactsController-listOrSearchContact-success`,
+        message: `listOrSearchContact-success-handler`,
       });
       next();
     } catch (err) {
       logger.log({
         level: 'error',
-        message: `contactsController-listOrSearchContact-${err.message}`,
+        message: `listOrSearchContact-${err.message}-handler`,
       });
       next(err);
     }
@@ -121,7 +121,7 @@ module.exports.contactHandler = {
       if (!contact) {
         throw boom.badRequest('contact not found');
       }
-      res.status(200).send(contact);
+      res.status(200).send({ contact });
       next();
     } catch (err) {
       next(err);
